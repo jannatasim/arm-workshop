@@ -4,7 +4,7 @@
     "parameters": {
         "storageAccountPrefix": {
             "type": "string",
-            "defaultValue": "richeneystg",
+            "defaultValue": "jannatasim",
             "maxLength": 11,
             "metadata": {
                 "description": "Prefix for the storage account name"
@@ -29,11 +29,11 @@
     "resources": [
         {
             "type": "Microsoft.Storage/storageAccounts",
-            "name": "[variables('storageAccount')]",
+            "name": "jannatasimstgacct",
             "apiVersion": "2015-06-15",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": "[variables('storageAccount')]"
+                "displayName": "jannatasimstgacct"
             },
             "properties": {
                 "accountType": "[parameters('accountType')]"
